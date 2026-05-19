@@ -8,11 +8,11 @@ export function HomePage() {
   const [cart, setCart] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:3000/api/products").then((resoponse) => {
+    axios.get("/api/products").then((resoponse) => {
       setProducts(resoponse.data);
     });
 
-    axios.get("http://localhost:3000/api/cart-items").then((resoponse) => {
+    axios.get("/api/cart-items").then((resoponse) => {
       setCart(resoponse.data);
     });
   }, []);
