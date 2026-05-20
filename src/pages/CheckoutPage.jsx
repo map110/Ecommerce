@@ -62,9 +62,10 @@ export function CheckoutPage({ cart }) {
                 <div key={cartItem.productId} className="cart-item-container">
                   <div className="delivery-date">
                     Delivery date:
-                    {dayjs(
-                      selectedDeliveryOption.estimatedDeliveryTimeMs
-                    ).format("dddd, MMMM D")}
+                    {selectedDeliveryOption &&
+                      dayjs(
+                        selectedDeliveryOption.estimatedDeliveryTimeMs
+                      ).format("dddd, MMMM D")}
                   </div>
 
                   <div className="cart-item-details-grid">
